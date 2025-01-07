@@ -1,0 +1,3 @@
+[submodule "color4bg.js"]
+	path = color4bg.js
+	url = https://github.com/winterx/color4bg.js.git
