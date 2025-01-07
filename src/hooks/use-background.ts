@@ -21,6 +21,14 @@ export const useBackground = <T extends ColorBg>(onCreate: () => T, afterCreate:
   }, [onCreate])
 
   useEffect(() => {
+    const handler = () => backgroundRef.current?.resize()
+    window.addEventListener('resize', handler)
+    return () => {
+      window.removeEventListener('resize', handler)
+    }
+  }, [])
+
+  useEffect(() => {
     afterCreateRef.current = afterCreate
   }, [afterCreate])
 }
