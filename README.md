@@ -2,7 +2,7 @@
 
 React component wrapper of [color4bg.js](https://github.com/winterx/color4bg.js) written in TypeScript.
 
-> **color4bg.js**
+> **color4bg.js**  
 > Super easily generate dynamic, abstract, and visually stunning background images for your web pages based on WebGL and JavaScript. High performance.
 
 ## TODO
