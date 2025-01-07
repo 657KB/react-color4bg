@@ -18,12 +18,12 @@ const AestheticFluidBg = forwardRef<HTMLDivElement, AestheticFluidBgProps>(({
   const id = useMemo(() => uuidV1(), [])
 
   const onCreate = useCallback(() => {
-    const background = new Background({ colors, seed, loop, radius_inner, radius_outer, noise })
+    const background = new Background({ dom: id, colors, seed, loop, radius_inner, radius_outer, noise })
     if (typeof scale === 'number') {
       background.update('scale', scale)
     }
     return background
-  }, [colors, seed, loop, radius_inner, radius_outer, noise, scale])
+  }, [id, colors, seed, loop, radius_inner, radius_outer, noise, scale])
 
   useBackground(onCreate, onInit)
 

@@ -13,12 +13,12 @@ const AbstractShapeBg = forwardRef<HTMLDivElement, AbstractShapeBgProps>(({
   const id = useMemo(() => uuidV1(), [])
 
   const onCreate = useCallback(() => {
-    const background = new Background({ colors, seed, loop, noise })
+    const background = new Background({ dom: id, colors, seed, loop, noise })
     if (typeof wavy === 'number') {
       background.update('wavy', wavy)
     }
     return background
-  }, [colors, seed, loop, noise, wavy])
+  }, [id, colors, seed, loop, noise, wavy])
 
   useBackground(onCreate, onInit)
 
