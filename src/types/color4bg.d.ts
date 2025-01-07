@@ -48,8 +48,6 @@ declare module 'color4bg/src/color4bg/AbstractBackground/AbstractShapeBg' {
     constructor({ noise }: AbstractShapeBgConstructorArgs)
     update(option: 'noise' | 'wavy', val: number)
   }
-
-  
 }
 
 declare module 'color4bg/src/color4bg/AbstractBackground/AestheticFluidBg' {
@@ -57,6 +55,4 @@ declare module 'color4bg/src/color4bg/AbstractBackground/AestheticFluidBg' {
     constructor({ radius_inner, radius_outer, noise }: AestheticFluidBgConstructorArgs)
     update(option: 'scale', val: number)
   }
-
-  
 }
