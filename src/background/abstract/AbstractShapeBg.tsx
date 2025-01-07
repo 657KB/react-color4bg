@@ -4,11 +4,14 @@ import { AbstractShapeBg as Background } from 'color4bg/src/color4bg/AbstractBac
 import type { BaseBackgroundProps } from '@/models/background'
 import { useBackground } from '@/hooks/use-background'
 
-type AbstractShapeBgProps = { noise?: number, wavy?: number } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
+type AbstractShapeBgProps = {
+  noise?: number
+  wavy?: number
+} & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const AbstractShapeBg = forwardRef<HTMLDivElement, AbstractShapeBgProps>(({
   colors, seed, loop, noise, wavy, onInit,
-  children, ...rest
+  ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
 
@@ -21,17 +24,6 @@ const AbstractShapeBg = forwardRef<HTMLDivElement, AbstractShapeBgProps>(({
   }, [id, colors, seed, loop, noise, wavy])
 
   useBackground(onCreate, onInit)
-
-  if (children) {
-    return (
-      <div {...rest} style={{ position: 'relative' }} ref={ref}>
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
-          <div id={id} />
-        </div>
-        {children}
-      </div>
-    )
-  }
 
   return <div {...rest} id={id} ref={ref} />
 })
