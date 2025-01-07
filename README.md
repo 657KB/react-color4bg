@@ -11,35 +11,35 @@ I will publish first version of this package after completing these tasks.
 
 ### Components
 
-[x] AbstractShapeBg
-[x] AestheticFluidBg
-[ ] AmbientLightBg
-[ ] BigBlobBg
-[ ] BlurDotBg
-[ ] BlurGradientBg
-[ ] ChaosWavesBg
-[ ] GridArrayBg
-[ ] RandomCubesBg
-[ ] SetupGradientBg
-[ ] SwirlingCurvesBg
-[ ] TrianglesMosaicBg
-[ ] WavyWavesBg
-[ ] AngleGradient
+- [x] AbstractShapeBg
+- [x] AestheticFluidBg
+- [ ] AmbientLightBg
+- [ ] BigBlobBg
+- [ ] BlurDotBg
+- [ ] BlurGradientBg
+- [ ] ChaosWavesBg
+- [ ] GridArrayBg
+- [ ] RandomCubesBg
+- [ ] SetupGradientBg
+- [ ] SwirlingCurvesBg
+- [ ] TrianglesMosaicBg
+- [ ] WavyWavesBg
+- [ ] AngleGradient
 
 ### Types
 
-[x] ColorBg
-[x] AbstractShapeBg
-[x] AestheticFluidBg
-[ ] AmbientLightBg
-[ ] BigBlobBg
-[ ] BlurDotBg
-[ ] BlurGradientBg
-[ ] ChaosWavesBg
-[ ] GridArrayBg
-[ ] RandomCubesBg
-[ ] SetupGradientBg
-[ ] SwirlingCurvesBg
-[ ] TrianglesMosaicBg
-[ ] WavyWavesBg
-[ ] AngleGradient
+- [x] ColorBg
+- [x] AbstractShapeBg
+- [x] AestheticFluidBg
+- [ ] AmbientLightBg
+- [ ] BigBlobBg
+- [ ] BlurDotBg
+- [ ] BlurGradientBg
+- [ ] ChaosWavesBg
+- [ ] GridArrayBg
+- [ ] RandomCubesBg
+- [ ] SetupGradientBg
+- [ ] SwirlingCurvesBg
+- [ ] TrianglesMosaicBg
+- [ ] WavyWavesBg
+- [ ] AngleGradient
