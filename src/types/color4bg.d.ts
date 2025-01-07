@@ -34,9 +34,9 @@ declare class ColorBg {
    */
   resize(): void
   /**
-   * Destroy the current background instance, then create a new background instance with a new seed.
+   * Reset background with a new seed.
    */
-  reset(seed: number): void
+  reset(seed?: number): void
   /**
    * Destroy background instance.
    */
