@@ -1,4 +1,4 @@
-type ColorBackgroundProps = {
+type ColorBackgroundConstructorArgs = {
   colors?: string[]
   seed?: number
   dom?: string | HTMLElement
@@ -15,8 +15,17 @@ type AestheticFluidBgConstructorArgs = {
   noise?: number
 } & ColorBackgroundProps
 
+type AmbientLightBgConstructorArgs = {
+  noise?: number
+  speed?: number
+  patternScale?: number
+  edgeBlur?: number
+  brightness?: number
+  darkness?: number
+} & ColorBackgroundConstructorArgs
+
 declare class ColorBg {
-  constructor(props: ColorBackgroundProps)
+  constructor({ colors, seed, dom, loop }: ColorBackgroundConstructorArgs)
   /**
    * Set colors.
    * 
@@ -45,14 +54,21 @@ declare class ColorBg {
 
 declare module 'color4bg/src/color4bg/AbstractBackground/AbstractShapeBg' {
   export class AbstractShapeBg extends ColorBg {
-    constructor({ noise }: AbstractShapeBgConstructorArgs)
+    constructor(args: AbstractShapeBgConstructorArgs)
     update(option: 'noise' | 'wavy', val: number)
   }
 }
 
 declare module 'color4bg/src/color4bg/AbstractBackground/AestheticFluidBg' {
   export class AestheticFluidBg extends ColorBg {
-    constructor({ radius_inner, radius_outer, noise }: AestheticFluidBgConstructorArgs)
+    constructor(args: AestheticFluidBgConstructorArgs)
     update(option: 'scale', val: number)
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/AmbientLightBg' {
+  export class AmbientLightBg extends ColorBg {
+    constructor(args: AmbientLightBgConstructorArgs)
+    update(option: 'noise' | 'speed' | 'pattern scale' | 'edge blur' | 'brightness' | 'darkness', val: number)
   }
 }
