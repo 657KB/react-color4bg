@@ -7,6 +7,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'react-color4bg',
+      formats: ['es'],
       fileName: 'react-color4bg',
     },
     rollupOptions: {
