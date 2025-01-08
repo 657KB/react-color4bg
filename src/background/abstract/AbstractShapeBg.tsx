@@ -10,7 +10,7 @@ type AbstractShapeBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const AbstractShapeBg = forwardRef<HTMLDivElement, AbstractShapeBgProps>(({
-  colors, seed, loop, noise, wavy, onInit,
+  colors, seed, loop, noise, wavy,
   ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
@@ -23,7 +23,7 @@ const AbstractShapeBg = forwardRef<HTMLDivElement, AbstractShapeBgProps>(({
     return background
   }, [id, colors, seed, loop, noise, wavy])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

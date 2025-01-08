@@ -10,7 +10,7 @@ type ChaosWavesBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const ChaosWavesBg = forwardRef<HTMLDivElement, ChaosWavesBgProps>(({
-  colors, seed, loop, noise, speed, onInit,
+  colors, seed, loop, noise, speed,
   ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
@@ -26,7 +26,7 @@ const ChaosWavesBg = forwardRef<HTMLDivElement, ChaosWavesBgProps>(({
     return background
   }, [id, colors, seed, loop, noise, speed])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

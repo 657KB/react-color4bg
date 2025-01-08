@@ -12,7 +12,7 @@ type SwirlingCurvesBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const SwirlingCurvesBg = forwardRef<HTMLDivElement, SwirlingCurvesBgProps>(({
-  colors, seed, loop, onInit,
+  colors, seed, loop,
   noise, speed, density, scale,
   ...rest
 }, ref) => {
@@ -35,7 +35,7 @@ const SwirlingCurvesBg = forwardRef<HTMLDivElement, SwirlingCurvesBgProps>(({
     return background
   }, [id, colors, seed, loop, noise, speed, density, scale])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

@@ -12,7 +12,7 @@ type AestheticFluidBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const AestheticFluidBg = forwardRef<HTMLDivElement, AestheticFluidBgProps>(({
-  colors, seed, loop, radius_inner, radius_outer, noise, scale, onInit,
+  colors, seed, loop, radius_inner, radius_outer, noise, scale,
   ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
@@ -25,7 +25,7 @@ const AestheticFluidBg = forwardRef<HTMLDivElement, AestheticFluidBgProps>(({
     return background
   }, [id, colors, seed, loop, radius_inner, radius_outer, noise, scale])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

@@ -11,7 +11,7 @@ type TrianglesMosaicBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const TrianglesMosaicBg = forwardRef<HTMLDivElement, TrianglesMosaicBgProps>(({
-  colors, seed, loop, onInit,
+  colors, seed, loop,
   noise, speed, factor,
   ...rest
 }, ref) => {
@@ -31,7 +31,7 @@ const TrianglesMosaicBg = forwardRef<HTMLDivElement, TrianglesMosaicBgProps>(({
     return background
   }, [id, colors, seed, loop, noise, speed, factor])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

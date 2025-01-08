@@ -7,7 +7,7 @@ import { useBackground } from '@/hooks/use-background'
 type AngleGradientProps = BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const AngleGradient = forwardRef<HTMLDivElement, AngleGradientProps>(({
-  colors, seed, loop, onInit,
+  colors, seed, loop,
   ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
@@ -16,7 +16,7 @@ const AngleGradient = forwardRef<HTMLDivElement, AngleGradientProps>(({
     return new Background({ dom: id, colors, seed, loop })
   }, [id, colors, seed, loop])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

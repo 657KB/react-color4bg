@@ -21,7 +21,6 @@ type GridArrayBgProps = {
 const GridArrayBg = forwardRef<HTMLDivElement, GridArrayBgProps>(({
   colors, seed, loop,
   scale, size, uw, uh, amplitude, radius, borderwidth, rotateCanvas, rotateUnit, speed, noise,
-  onInit,
   ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
@@ -64,7 +63,7 @@ const GridArrayBg = forwardRef<HTMLDivElement, GridArrayBgProps>(({
     return background
   }, [id, colors, seed, loop, scale, size, uw, uh, amplitude, radius, borderwidth, rotateCanvas, rotateUnit, speed, noise])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

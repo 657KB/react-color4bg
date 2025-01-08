@@ -9,7 +9,7 @@ type BlurGradientBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const BlurGradientBg = forwardRef<HTMLDivElement, BlurGradientBgProps>(({
-  colors, seed, loop, noise, onInit,
+  colors, seed, loop, noise,
   ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
@@ -22,7 +22,7 @@ const BlurGradientBg = forwardRef<HTMLDivElement, BlurGradientBgProps>(({
     return background
   }, [id, colors, seed, loop, noise])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

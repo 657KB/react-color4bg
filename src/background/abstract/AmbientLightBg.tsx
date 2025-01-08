@@ -14,7 +14,7 @@ type AmbientLightBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const AmbientLightBg = forwardRef<HTMLDivElement, AmbientLightBgProps>(({
-  colors, seed, loop, noise, speed, patternScale, edgeBlur, brightness, darkness, onInit,
+  colors, seed, loop, noise, speed, patternScale, edgeBlur, brightness, darkness,
   ...rest
 }, ref) => {
   const id = useMemo(() => uuidV1(), [])
@@ -42,7 +42,7 @@ const AmbientLightBg = forwardRef<HTMLDivElement, AmbientLightBgProps>(({
     return background
   }, [id, colors, seed, loop, noise, speed, patternScale, edgeBlur, brightness, darkness])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })

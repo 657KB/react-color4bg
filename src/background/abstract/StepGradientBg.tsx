@@ -11,7 +11,7 @@ type StepGradientBgProps = {
 } & BaseBackgroundProps & React.HTMLAttributes<HTMLDivElement>
 
 const StepGradientBg = forwardRef<HTMLDivElement, StepGradientBgProps>(({
-  colors, seed, loop, onInit,
+  colors, seed, loop,
   size, spacing, noise,
   ...rest
 }, ref) => {
@@ -31,7 +31,7 @@ const StepGradientBg = forwardRef<HTMLDivElement, StepGradientBgProps>(({
     return background
   }, [id, colors, seed, loop, size, spacing, noise])
 
-  useBackground(onCreate, onInit)
+  useBackground(onCreate)
 
   return <div {...rest} id={id} ref={ref} />
 })
