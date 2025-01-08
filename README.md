@@ -13,12 +13,12 @@ I will publish first version of this package after completing these tasks.
 
 - [x] AbstractShapeBg
 - [x] AestheticFluidBg
-- [ ] AmbientLightBg
-- [ ] BigBlobBg
-- [ ] BlurDotBg
-- [ ] BlurGradientBg
-- [ ] ChaosWavesBg
-- [ ] GridArrayBg
+- [x] AmbientLightBg
+- [x] BigBlobBg
+- [x] BlurDotBg
+- [x] BlurGradientBg
+- [x] ChaosWavesBg
+- [x] GridArrayBg
 - [ ] RandomCubesBg
 - [ ] SetupGradientBg
 - [ ] SwirlingCurvesBg
@@ -31,12 +31,12 @@ I will publish first version of this package after completing these tasks.
 - [x] ColorBg
 - [x] AbstractShapeBg
 - [x] AestheticFluidBg
-- [ ] AmbientLightBg
-- [ ] BigBlobBg
-- [ ] BlurDotBg
-- [ ] BlurGradientBg
-- [ ] ChaosWavesBg
-- [ ] GridArrayBg
+- [x] AmbientLightBg
+- [x] BigBlobBg
+- [x] BlurDotBg
+- [x] BlurGradientBg
+- [x] ChaosWavesBg
+- [x] GridArrayBg
 - [ ] RandomCubesBg
 - [ ] SetupGradientBg
 - [ ] SwirlingCurvesBg
