@@ -7,10 +7,12 @@ import BlurGradientBg from './background/abstract/BlurGradientBg'
 import ChaosWavesBg from './background/abstract/ChaosWavesBg'
 import GridArrayBg from './background/abstract/GridArrayBg'
 import RandomCubesBg from './background/abstract/RandomCubesBg'
-import SetupGradientBg from './background/abstract/SetupGradientBg'
+import SetupGradientBg from './background/abstract/StepGradientBg'
 import SwirlingCurvesBg from './background/abstract/SwirlingCurvesBg'
 import TrianglesMosaicBg from './background/abstract/TrianglesMosaicBg'
 import WavyWavesBg from './background/abstract/WavyWavesBg'
+// It seems that AngleGradient is currently not working properly, maybe it's not finished yet.
+// import AngleGradient from './background/simple/AngleGradient'
 
 export {
   AbstractShapeBg,
@@ -26,4 +28,5 @@ export {
   SwirlingCurvesBg,
   TrianglesMosaicBg,
   WavyWavesBg,
+  // AngleGradient,
 }

@@ -1,7 +1,7 @@
 type ColorBackgroundConstructorArgs = {
   colors?: string[]
   seed?: number
-  dom?: string | HTMLElement
+  dom?: string
   loop?: boolean
 }
 
@@ -22,6 +22,18 @@ type BigBlobBgConstructorArgs = ColorBackgroundConstructorArgs
 type BlurDotBgConstructorArgs = ColorBackgroundConstructorArgs
 
 type BlurGradientBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type ChaosWavesBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type RandomCubesBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type StepGradientBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type SwirlingCurvesBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type TrianglesMosaicBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type WavyWavesBgConstructorArgs = ColorBackgroundConstructorArgs
 
 declare class ColorBg {
   constructor({ colors, seed, dom, loop }: ColorBackgroundConstructorArgs)
@@ -54,21 +66,29 @@ declare class ColorBg {
 declare module 'color4bg/src/color4bg/AbstractBackground/AbstractShapeBg' {
   export class AbstractShapeBg extends ColorBg {
     constructor(args: AbstractShapeBgConstructorArgs)
-    update(option: 'noise' | 'wavy', val: number)
+    update(option: 'noise' | 'wavy', val: number): void
   }
 }
 
 declare module 'color4bg/src/color4bg/AbstractBackground/AestheticFluidBg' {
   export class AestheticFluidBg extends ColorBg {
     constructor(args: AestheticFluidBgConstructorArgs)
-    update(option: 'scale', val: number)
+    update(option: 'scale', val: number): void
   }
 }
 
 declare module 'color4bg/src/color4bg/AbstractBackground/AmbientLightBg' {
   export class AmbientLightBg extends ColorBg {
     constructor(args: AmbientLightBgConstructorArgs)
-    update(option: 'noise' | 'speed' | 'pattern scale' | 'edge blur' | 'brightness' | 'darkness', val: number)
+    update(
+      option: 'noise' |
+              'speed' |
+              'pattern scale' |
+              'edge blur' |
+              'brightness' |
+              'darkness',
+      val: number
+    ): void
   }
 }
 
@@ -87,6 +107,72 @@ declare module 'color4bg/src/color4bg/AbstractBackground/BlurDotBg' {
 declare module 'color4bg/src/color4bg/AbstractBackground/BlurGradientBg' {
   export class BlurGradientBg extends ColorBg {
     constructor(args: BlurGradientBgConstructorArgs)
-    update(option: 'noise', val: number)
+    update(option: 'noise', val: number): void
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/ChaosWavesBg' {
+  export class ChaosWavesBg extends ColorBg {
+    constructor(args: ChaosWavesBgConstructorArgs)
+    update(option: 'noise' | 'speed', val: number): void
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/GridArrayBg' {
+  export class GridArrayBg extends ColorBg {
+    constructor(args: GridArrayBgConstructorArgs)
+    update(
+      option: 'scale' |
+              'size' |
+              'u_w' |
+              'u_h' |
+              'amplitude' |
+              'radius' |
+              'borderwidth' |
+              'rotateCanvas' |
+              'rotateUnit' |
+              'speed' |
+              'noise',
+      val: number
+    ): void
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/RandomCubesBg' {
+  export class RandomCubesBg extends ColorBg {
+    constructor(args: RandomCubesBgConstructorArgs)
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/StepGradientBg' {
+  export class StepGradientBg extends ColorBg {
+    constructor(args: StepGradientBgConstructorArgs)
+    update(option: 'size' | 'spacing' | 'noise', val: number): void
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/SwirlingCurvesBg' {
+  export class SwirlingCurvesBg extends ColorBg {
+    constructor(args: SwirlingCurvesBgConstructorArgs)
+    update(option: 'noise' | 'speed' | 'density' | 'scale', val: number): void
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/TrianglesMosaicBg' {
+  export class TrianglesMosaicBg extends ColorBg {
+    constructor(args: TrianglesMosaicBgConstructorArgs)
+    update(option: 'noise' | 'speed' | 'factor', val: number): void
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/WavyWavesBg' {
+  export class WavyWavesBg extends ColorBg {
+    constructor(args: WavyWavesBgConstructorArgs)
+  }
+}
+
+declare module 'color4bg/src/color4bg/SimpleBackground/AngleGradient' {
+  export class Bg extends ColorBg {
+    constructor(args: AngleGradientConstructorArgs)
   }
 }
