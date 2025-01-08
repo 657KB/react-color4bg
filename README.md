@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="assets/header.png" alt="Meta" width="100%">
+  <img src="assets/header.png" alt="react-color4bg" width="100%">
 </h1>
 
 > **[color4bg.js](https://github.com/winterx/color4bg.js)**  
