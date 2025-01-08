@@ -15,14 +15,13 @@ type AestheticFluidBgConstructorArgs = {
   noise?: number
 } & ColorBackgroundProps
 
-type AmbientLightBgConstructorArgs = {
-  noise?: number
-  speed?: number
-  patternScale?: number
-  edgeBlur?: number
-  brightness?: number
-  darkness?: number
-} & ColorBackgroundConstructorArgs
+type AmbientLightBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type BigBlobBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type BlurDotBgConstructorArgs = ColorBackgroundConstructorArgs
+
+type BlurGradientBgConstructorArgs = ColorBackgroundConstructorArgs
 
 declare class ColorBg {
   constructor({ colors, seed, dom, loop }: ColorBackgroundConstructorArgs)
@@ -70,5 +69,24 @@ declare module 'color4bg/src/color4bg/AbstractBackground/AmbientLightBg' {
   export class AmbientLightBg extends ColorBg {
     constructor(args: AmbientLightBgConstructorArgs)
     update(option: 'noise' | 'speed' | 'pattern scale' | 'edge blur' | 'brightness' | 'darkness', val: number)
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/BigBlobBg' {
+  export class BigBlobBg extends ColorBg {
+    constructor(args: BigBlobBgConstructorArgs)
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/BlurDotBg' {
+  export class BlurDotBg extends ColorBg {
+    constructor(args: BlurDotBgConstructorArgs)
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/BlurGradientBg' {
+  export class BlurGradientBg extends ColorBg {
+    constructor(args: BlurGradientBgConstructorArgs)
+    update(option: 'noise', val: number)
   }
 }
