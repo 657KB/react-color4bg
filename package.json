@@ -1,6 +1,5 @@
 {
   "name": "react-color4bg",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
