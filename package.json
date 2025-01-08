@@ -10,11 +10,7 @@
   "engines": {
     "pnpm": "10.0.0"
   },
-  "files": [
-    "color4bg.js",
-    "dist",
-    "src"
-  ],
+  "files": ["dist"],
   "keywords": [
     "react",
     "color4bg.js",
