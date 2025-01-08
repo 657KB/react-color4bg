@@ -1,12 +1,8 @@
 <h1 align="center">
-  <img src="assets/header.svg" alt="Meta" width="100%">
+  <img src="assets/header.png" alt="Meta" width="100%">
 </h1>
 
-# react-color4bg
-
-React component wrapper of [color4bg.js](https://github.com/winterx/color4bg.js) written in TypeScript.
-
-> **color4bg.js**  
+> **[color4bg.js](https://github.com/winterx/color4bg.js)**  
 > Super easily generate dynamic, abstract, and visually stunning background images for your web pages based on WebGL and JavaScript. High performance.
 
 ## Get Started
