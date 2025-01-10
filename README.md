@@ -2,10 +2,16 @@
   <img src="assets/header.png" alt="react-color4bg" width="100%">
 </h1>
 
-> **[color4bg.js](https://github.com/winterx/color4bg.js)**  
-> Super easily generate dynamic, abstract, and visually stunning background images for your web pages based on WebGL and JavaScript. High performance.
+**About `color4bg.js`**
 
-## Get Started
+Super easily generate dynamic, abstract, and visually stunning background images for your web pages based on WebGL and JavaScript. High performance.
+
+📦 [winterx/color4bg.js](https://github.com/winterx/color4bg.js)
+
+🔗 [https://www.color4bg.com/](https://www.color4bg.com/)
+
+
+# Get Started
 
 1.install `react-color4bg`
 
@@ -23,26 +29,24 @@ npm i react-color4bg
 />
 ```
 
-## Component Props
+# Component Props
 
-All components have three identical properties:
+All components have three identical properties (see below), Some components have additional properties, which can be viewed through TypeScript's type completion, You can visit [https://www.color4bg.com/](https://www.color4bg.com/) to view all available background types.
 
-### colors
+## colors
 
 type: `string[]`
 
-> An array of hex colors of any length, used to describe the color combination of the background.
+An array of up to 6 hexadecimal color values, used to describe the color combination of the background.
 
-### seed
+## seed
 
 type: `number`
 
-> The seed used to generate the background, default is 1000.
+A Pseudo-random numerical value used to generate a consistent pattern, default is 1000.
 
-### loop
+## loop
 
 type: `boolean`
 
-> A flag to control whether the background animation is enabled.
-
-Some components have additional properties, which can be viewed through TypeScript's type completion.
+Determines whether the background should animated looply or not.
