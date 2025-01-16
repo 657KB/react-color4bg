@@ -1,5 +1,4 @@
-import { forwardRef, useCallback, useMemo } from 'react'
-import { v1 as uuidV1 } from 'uuid'
+import { forwardRef, useCallback, useId } from 'react'
 import { GridArrayBg as Background } from 'color4bg/src/color4bg/AbstractBackground/GridArrayBg'
 import type { BaseBackgroundProps } from '@/models/background'
 import { useBackground } from '@/hooks/use-background'
@@ -23,7 +22,7 @@ const GridArrayBg = forwardRef<HTMLDivElement, GridArrayBgProps>(({
   scale, size, uw, uh, amplitude, radius, borderwidth, rotateCanvas, rotateUnit, speed, noise,
   ...rest
 }, ref) => {
-  const id = useMemo(() => uuidV1(), [])
+  const id = useId()
 
   const onCreate = useCallback(() => {
     const background = new Background({ dom: id, colors, seed, loop })

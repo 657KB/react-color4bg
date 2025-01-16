@@ -1,5 +1,4 @@
-import { forwardRef, useCallback, useMemo } from 'react'
-import { v1 as uuidV1 } from 'uuid'
+import { forwardRef, useCallback, useId } from 'react'
 import { AbstractShapeBg as Background } from 'color4bg/src/color4bg/AbstractBackground/AbstractShapeBg'
 import type { BaseBackgroundProps } from '@/models/background'
 import { useBackground } from '@/hooks/use-background'
@@ -13,7 +12,7 @@ const AbstractShapeBg = forwardRef<HTMLDivElement, AbstractShapeBgProps>(({
   colors, seed, loop, noise, wavy,
   ...rest
 }, ref) => {
-  const id = useMemo(() => uuidV1(), [])
+  const id = useId()
 
   const onCreate = useCallback(() => {
     const background = new Background({ dom: id, colors, seed, loop, noise })

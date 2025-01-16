@@ -1,5 +1,4 @@
-import { forwardRef, useCallback, useMemo } from 'react'
-import { v1 as uuidV1 } from 'uuid'
+import { forwardRef, useCallback, useId } from 'react'
 import { AmbientLightBg as Background } from 'color4bg/src/color4bg/AbstractBackground/AmbientLightBg'
 import type { BaseBackgroundProps } from '@/models/background'
 import { useBackground } from '@/hooks/use-background'
@@ -17,7 +16,7 @@ const AmbientLightBg = forwardRef<HTMLDivElement, AmbientLightBgProps>(({
   colors, seed, loop, noise, speed, patternScale, edgeBlur, brightness, darkness,
   ...rest
 }, ref) => {
-  const id = useMemo(() => uuidV1(), [])
+  const id = useId()
 
   const onCreate = useCallback(() => {
     const background = new Background({ dom: id, colors, seed, loop })

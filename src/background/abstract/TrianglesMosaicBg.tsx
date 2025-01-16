@@ -1,5 +1,4 @@
-import { forwardRef, useCallback, useMemo } from 'react'
-import { v1 as uuidV1 } from 'uuid'
+import { forwardRef, useCallback, useId } from 'react'
 import { TrianglesMosaicBg as Background } from 'color4bg/src/color4bg/AbstractBackground/TrianglesMosaicBg'
 import type { BaseBackgroundProps } from '@/models/background'
 import { useBackground } from '@/hooks/use-background'
@@ -15,7 +14,7 @@ const TrianglesMosaicBg = forwardRef<HTMLDivElement, TrianglesMosaicBgProps>(({
   noise, speed, factor,
   ...rest
 }, ref) => {
-  const id = useMemo(() => uuidV1(), [])
+  const id = useId()
 
   const onCreate = useCallback(() => {
     const background = new Background({ dom: id, colors, seed, loop })
