@@ -1,7 +1,7 @@
 {
   "name": "react-color4bg",
   "description": "React component wrapper of color4bg.js written in TypeScript.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "repository": "https://github.com/657KB/react-color4bg",
   "main": "./dist/index.js",
