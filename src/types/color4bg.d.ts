@@ -35,6 +35,8 @@ type TrianglesMosaicBgConstructorArgs = ColorBackgroundConstructorArgs
 
 type WavyWavesBgConstructorArgs = ColorBackgroundConstructorArgs
 
+type CurveGradientBgConstructorArgs = ColorBackgroundConstructorArgs
+
 declare class ColorBg {
   constructor({ colors, seed, dom, loop }: ColorBackgroundConstructorArgs)
   /**
@@ -174,5 +176,12 @@ declare module 'color4bg/src/color4bg/AbstractBackground/WavyWavesBg' {
 declare module 'color4bg/src/color4bg/SimpleBackground/AngleGradient' {
   export class Bg extends ColorBg {
     constructor(args: AngleGradientConstructorArgs)
+  }
+}
+
+declare module 'color4bg/src/color4bg/AbstractBackground/CurveGradientBg' {
+  export class CurveGradientBg extends ColorBg {
+    constructor(args: CurveGradientBgConstructorArgs)
+    update(option: 'noise' | 'speed' | 'density' | 'scale', val: number): void
   }
 }
